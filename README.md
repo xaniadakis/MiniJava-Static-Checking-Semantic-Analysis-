@@ -1,7 +1,8 @@
 # MiniJava Static Checking Semantic Analysis
 
-In this project i implement a part of the compiler for MiniJava, a subset of Java. MiniJava is designed so that its programs can be compiled by a full Java compiler like javac.
+In this project i implement a part of the compiler for MiniJava, a subset of Java. 
 
+MiniJava is designed so that its programs can be compiled by a full Java compiler like javac.
 
 Here is a partial, textual description of the language. Much of it can be safely ignored (most things are well defined in the grammar or derived from the requirement that each MiniJava program is also a Java program):
     MiniJava is fully object-oriented, like Java. It does not allow global functions, only classes, fields and methods. The basic types are int, boolean, and int [] which is an array of int. One can build classes that contain fields of these basic types or of other classes. Classes contain methods with arguments of basic or class types, etc.
