@@ -11,11 +11,8 @@ Here is a partial, textual description of the language. Much of it can be safely
     In MiniJava, constructors and destructors are not defined. The new operator calls a default void constructor. In addition, there are no inner classes and there are no static methods or fields. By exception, the pseudo-static method “main” is handled specially in the grammar. A MiniJava program is a file that begins with a special class that contains the main method and specific arguments that are not used. The special class has no fields. After it, other classes are defined that can have fields and methods.
     Notably, an A class can contain a field of type B, where B is defined later in the file. But when we have “class B extends A”, A must be defined before B. As one can notice in the grammar, MiniJava offers very simple ways to construct expressions and only allows < comparisons. There are no lists of operations, but a method call on one object may be used as an argument for another method call. In terms of logical operators, MiniJava allows the logical and (“&&”) and the logical not (“!”). For int arrays, the assignment and [] operators are allowed, as well as the a.length expression, which returns the size of array a. We have “while” and “if” code blocks. The latter are always followed by an “else”. Finally, the assignment “A a = new B();” when B extends A is correct, and the same applies when a method expects a parameter of type A and a B instance is given instead
 The compiler only accepts expressions of type int as the argument of the PrintStatement.
-The MiniJava grammar in BNF can be downloaded here <http://cgi.di.uoa.gr/~compilers/project_files/minijava-new/minijava.html>. 
-The MiniJava grammar in JavaCC form is here. You will use the JTB tool to convert it into a grammar that produces class hierarchies. 
-   
-   
- 
+
+
 I implement two visitors that take control over the MiniJava input file and tell whether it is semantically correct, or print an error message. 
 
 Also, for every MiniJava file, my program stores and print some useful data for every class such as the names and the offsets of every field and method this class contains. For MiniJava we have only three types of fields (int, boolean and pointers). Ints are stored in 4 bytes, booleans in 1 byte and pointers in 8 bytes (we consider functions and int arrays as pointers).
