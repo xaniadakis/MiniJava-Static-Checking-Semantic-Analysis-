@@ -1,6 +1,6 @@
 # MiniJava Static Checking Semantic Analysis
 
-In this project i implement a part of the compiler for MiniJava, a subset of Java. 
+In this project I implement a part of the compiler for MiniJava, a subset of Java. 
 
 MiniJava is designed so that its programs can be compiled by a full Java compiler like javac.
 
